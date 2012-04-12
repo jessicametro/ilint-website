@@ -1,0 +1,255 @@
+body {
+	background-color: #f6f6f6;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	margin-right: auto;
+	margin-left: auto;
+	width: 960px;
+
+	font-family: 'Helvetica Neue', 'Helvetica', 'Lucida Grande', 'Arial', sans-serif;
+}
+
+
+#wrapper {
+	background-color: #ffffff;
+}
+
+
+#header {
+	height: 93px;
+	background-image: url('header.png');
+}
+
+#navigation {
+	height: 45px;
+	background-color: #eeeeee;
+}
+
+#footer {
+	margin-top: 30px;
+	height: 147px;
+	background-image: url('footer.png');
+}
+
+
+/** navigation stuff **/
+#navigation .navelement {
+	float: left;
+	height: 45px;
+	line-height: 45px;
+	font-family: 'Georgia', serif;
+	font-size: 18px;
+}
+#navigation .navelement a {
+	display: block;
+	height: 45px;
+	padding-right: 42px;
+	padding-left: 42px;
+	color:#336699;
+}
+#navigation .navelement a.home {
+	width: 49px;
+}
+#navigation .navelement a.about {
+	width: 49px;
+}
+#navigation .navelement a.forstudents {
+	width: 102px;
+}
+#navigation .navelement a.forfaculty {
+	width: 92px;
+}
+#navigation .navelement a.community {
+	width: 95px;
+}
+#navigation .navelement a.giving {
+	width: 53px;
+}
+
+
+#navigation .navelement a:hover {
+	background-color: #dcdcdc;
+}
+#navigation .navelement a.current {
+	background-color: #dcdcdc;
+}
+#navigation .border {
+	width: 0px;
+	padding-left: 1px;
+	margin-left: 1px;
+	height: 31px;
+	margin-bottom: 6px;
+	margin-top: 6px;
+	float: left;
+	border-left:1px dotted #cccccc;
+}
+
+
+
+/** standard html elements **/
+a {
+	text-decoration: none;
+	color: #ff6e00;
+}
+a:visited {
+	color: #ff6e00;
+}
+p a:hover {
+	color: #ff6e00;
+	text-decoration: underline;
+}
+h3 a:hover {
+	color: #ff6e00;
+	text-decoration: underline;
+}
+li a:hover {
+	color: #ff6e00;
+	text-decoration: underline;
+}
+
+h1, h2{
+	font-family: 'Georgia', serif;
+	font-size: 20px;
+	font-weight: normal;
+	color: #0f3357;
+	padding-top: 27px;
+	padding-bottom: 13px;
+}
+h1 {
+	border-bottom: 1px dotted #cfcfcf;
+}
+h3 {
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 12px;
+	/** line-height: 16px; **/
+	margin-top: -12px;
+}
+h4 {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: bold;
+	margin-top: 16px;
+	margin-bottom: -8px;
+}
+
+.smallmargin {
+	margin-top: 4px;
+}
+
+p {
+	/** margin-top: 12px; **/
+	margin-right: 25px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+p.lastparagraph {
+	padding-bottom: 4px;
+}
+
+#content {
+	font-size: 12px;
+	line-height: 16px;
+}
+p.content {
+	font-size: 12px;
+	line-height: 16px;
+}
+span.subtext {
+	color: #aaaaaa;
+}
+li {
+	font-size: 12px;
+	line-height: 16px;
+}
+br {
+	size: 8px;
+}
+
+
+
+
+/** main page stuff **/
+#mainimage {
+	height: 400px;
+}
+.column1, .column2, .column3 {
+	float: left; 
+	width: 287px;
+	margin-right: 25px;
+	/**background-color: pink;**/
+}
+
+#content {
+	margin-left: 24px;
+}
+
+
+
+/** other page stuff **/
+
+#columns {
+	margin-left: 0px;
+}
+
+.column4, .column6 {
+	float: left; 
+	width: 267px;
+	margin-right: 25px;
+	
+}
+
+.column5, .column7 {
+	float: left; 
+	width: 267px;
+	margin-right: 25px;
+	
+}
+
+.clear {
+	width: 100%;
+	clear: both;
+}
+
+#innercontent {
+	width:599px;
+	float: right;
+	margin-right: 25px;
+}
+#scroller, #scroller-fixed {
+	width: 287px;
+}
+#scroller {
+	float: left;
+	margin-left: 25px;
+	font-size: 12px;
+	line-height: 16px;
+}
+#scroller-fixed {
+	display: none;
+	position: fixed;
+	top: 0px;
+	margin-left: 25px;
+	font-size: 12px;
+	line-height: 16px;
+}
+#menufixed {
+	position: relative;
+}
+#scroller a, #scroller-fixed a {
+	color: #999999;
+	text-decoration: none;
+}
+#scroller a:visited, #scroller-fixed a:visited {
+	color: #999999;
+	text-decoration: none;
+}
+#scroller a:hover, #scroller-fixed a:hover {
+	color: #00b5a3;
+	text-decoration: none;
+}
+#scroller a.selected, #scroller-fixed a.selected {
+	color: #00b5a3;
+	text-decoration: none;
+}
