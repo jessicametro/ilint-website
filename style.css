@@ -148,6 +148,10 @@ p.lastparagraph {
 	padding-bottom: 4px;
 }
 
+p.indentGiving {
+	margin-left: 100px;
+}
+
 #content {
 	font-size: 12px;
 	line-height: 16px;
