@@ -148,8 +148,8 @@ p.lastparagraph {
 	padding-bottom: 4px;
 }
 
-p.indentGiving {
-	margin-left: 100px;
+#indentGiving {
+	margin-left: 28px;
 }
 
 #content {
