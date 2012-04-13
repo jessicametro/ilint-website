@@ -99,6 +99,10 @@ p a:hover {
 	color: #ff6e00;
 	text-decoration: underline;
 }
+a:hover {
+	color: #ff6e00;
+	text-decoration: underline;
+}
 h3 a:hover {
 	color: #ff6e00;
 	text-decoration: underline;
@@ -150,6 +154,13 @@ p.lastparagraph {
 
 #indentGiving {
 	margin-left: 28px;
+}
+
+#indentForStudents {
+	margin-left: 28px;
+	font-size: 12px;
+	line-height: 16px;
+	margin-top: -12px;
 }
 
 #content {
