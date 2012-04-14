@@ -99,76 +99,80 @@ body {
 
 
 /*** STANDARD HTML STYLING CODE ***/
-a {
-	text-decoration: none;
-	color: #ff6e00;
-}
-a:visited {
-	color: #ff6e00;
-}
-a:hover {
-	color: #ff6e00;
-	text-decoration: underline;
-}
-h1, h2 {
-	margin: 0;
-	padding: 0;
-	font-family: 'Georgia', serif;
-	font-size: 20px;
-	font-weight: normal;
-	color: #0f3357;
-	padding-top: 32px;
-	padding-bottom: 12px;
-}
-h1 {
-	border-bottom: 1px dotted #cfcfcf;
-}
-h3 {
-	margin: 0;
-	padding: 0;
-	font-weight: normal;
-	text-transform: uppercase;
-	font-size: 12px;
-	/** line-height: 16px; **/
-}
-h4 {
-	margin: 0;
-	padding: 0;
-	font-size: 12px;
-	line-height: 16px;
-	font-weight: bold;
-}
+/* links */
+	a {
+		text-decoration: none;
+		color: #ff6e00;
+	}
+	a:visited {
+		color: #ff6e00;
+	}
+	a:hover {
+		color: #ff6e00;
+		text-decoration: underline;
+	}
+	
+/* headings */
+	h1, h2 {
+		margin: 0;
+		padding: 0;
+		font-family: 'Georgia', serif;
+		font-size: 20px;
+		font-weight: normal;
+		color: #0f3357;
+		padding-top: 32px;
+		padding-bottom: 12px;
+	}
+	h1 {
+		border-bottom: 1px dotted #cfcfcf;
+	}
+	h3 {
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+		text-transform: uppercase;
+		font-size: 12px;
+		/** line-height: 16px; **/
+	}
+	h4 {
+		margin: 0;
+		padding: 0;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: bold;
+	}
 
-.smallmargin {
-	margin-top: 4px;
-}
+/* paragraphs */
+	p {
+		/** margin-top: 12px; **/
+		margin:0;
+		padding:0;
+		font-size: 12px;
+		line-height: 16px;
+	}
+	p.content {
+	}
+	p.lastparagraph {
+		padding-bottom: 4px;
+	}
+	.indented {
+		margin-left: 28px;
+	}
+	.smallmargin {
+		margin-top: 4px;
+	}
 
-p {
-	/** margin-top: 12px; **/
-	margin:0;
-	padding:0;
-	font-size: 12px;
-	line-height: 16px;
-}
-p.content {
-}
-p.lastparagraph {
-	padding-bottom: 4px;
-}
-.indented {
-	margin-left: 28px;
-}
-
-span.subtext {
-	color: #aaaaaa;
-}
-li {
-	font-size: 12px;
-	line-height: 16px;
-}
-br {
-	size: 8px;
-}
+/* misc. */
+	span.subtext {
+		color: #aaaaaa;
+	}
+	li {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	br {
+		size: 8px;
+	}
 /*** /STANDARD HTML STYLING CODE ***/
 
 

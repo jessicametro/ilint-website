@@ -88,14 +88,21 @@ function updateSelected() {
         var name = $(this).attr('id');
         var itemy = $(this).offset().top;
         var height = $(this).height();
-        var scrolly = $(window).scrollTop();
-        scrolly  = scrolly + 100; //give us some buffer;
+        var scrolly = fixScrollToActuallyReachBottomThing();
+        //scrolly  = scrolly + 100; //give us some buffer;
         if ((itemy+height) > scrolly && itemy < scrolly) {
             selectInScrollbar(name);
         } else {
             unselectInScrollbar(name);
         }
     });
+}
+function fixScrollToActuallyReachBottomThing() {
+	var scrolly = $(window).scrollTop();
+	var height = $(window).height();
+	var docheight = $(document).height();
+	var marginbottom = $("#footer").height() + 31;
+	return scrolly + (height-marginbottom) * (scrolly/(docheight-height));
 }
 function selectInScrollbar(name) {
     $("a.scrolllink").each(function(index, element) {
