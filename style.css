@@ -153,18 +153,22 @@ body {
 	p.content {
 	}
 	p.lastparagraph {
-		padding-bottom: 4px;
 	}
 	.indented {
 		margin-left: 28px;
 	}
 	.smallmargin {
-		margin-top: 4px;
 	}
+
 
 /* misc. */
 	span.subtext {
 		color: #aaaaaa;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: square;
 	}
 	li {
 		font-size: 12px;
