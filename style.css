@@ -129,6 +129,9 @@ body {
 	h1 {
 		border-bottom: 1px dotted #cfcfcf;
 	}
+	h2 {
+		line-height: 22px;
+	}
 	h3 {
 		margin: 0;
 		padding: 0;
@@ -163,7 +166,12 @@ body {
 	}
 	.smallmargin {
 	}
-
+	.quoteblock {
+		font-family: 'Georgia', serif;
+		font-style: italic;
+		font-size: 12px;
+		line-height: 16px;
+	}
 
 /* misc. */
 	span.subtext {
