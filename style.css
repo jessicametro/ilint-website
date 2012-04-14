@@ -6,19 +6,24 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	width: 960px;
-
+	font-size: 12px;
+	line-height: 16px;
 	font-family: 'Helvetica Neue', 'Helvetica', 'Lucida Grande', 'Arial', sans-serif;
 }
 
 
+/*** MAIN LAYOUT OF SITE ***/
 #wrapper {
 	background-color: #ffffff;
 }
 
-
 #header {
 	height: 93px;
 	background-image: url('header.png');
+}
+
+#mainimage {
+	height: 400px;
 }
 
 #navigation {
@@ -26,14 +31,21 @@ body {
 	background-color: #eeeeee;
 }
 
+#content {
+	margin-left: 24px;
+}
+
 #footer {
 	margin-top: 30px;
 	height: 147px;
 	background-image: url('footer.png');
 }
+/*** /MAIN LAYOUT OF SITE ***/
 
 
-/** navigation stuff **/
+
+
+/*** NAVIGATION CODE ***/
 #navigation .navelement {
 	float: left;
 	height: 45px;
@@ -66,8 +78,6 @@ body {
 #navigation .navelement a.giving {
 	width: 53px;
 }
-
-
 #navigation .navelement a:hover {
 	background-color: #dcdcdc;
 }
@@ -84,10 +94,11 @@ body {
 	float: left;
 	border-left:1px dotted #cccccc;
 }
+/*** /NAVIGATION CODE ***/
 
 
 
-/** standard html elements **/
+/*** STANDARD HTML STYLING CODE ***/
 a {
 	text-decoration: none;
 	color: #ff6e00;
@@ -95,47 +106,37 @@ a {
 a:visited {
 	color: #ff6e00;
 }
-p a:hover {
-	color: #ff6e00;
-	text-decoration: underline;
-}
 a:hover {
 	color: #ff6e00;
 	text-decoration: underline;
 }
-h3 a:hover {
-	color: #ff6e00;
-	text-decoration: underline;
-}
-li a:hover {
-	color: #ff6e00;
-	text-decoration: underline;
-}
-
-h1, h2{
+h1, h2 {
+	margin: 0;
+	padding: 0;
 	font-family: 'Georgia', serif;
 	font-size: 20px;
 	font-weight: normal;
 	color: #0f3357;
-	padding-top: 27px;
-	padding-bottom: 13px;
+	padding-top: 32px;
+	padding-bottom: 12px;
 }
 h1 {
 	border-bottom: 1px dotted #cfcfcf;
 }
 h3 {
+	margin: 0;
+	padding: 0;
 	font-weight: normal;
 	text-transform: uppercase;
 	font-size: 12px;
 	/** line-height: 16px; **/
-	margin-top: -12px;
 }
 h4 {
+	margin: 0;
+	padding: 0;
 	font-size: 12px;
 	line-height: 16px;
 	font-weight: bold;
-	margin-top: 16px;
-	margin-bottom: -8px;
 }
 
 .smallmargin {
@@ -144,33 +145,20 @@ h4 {
 
 p {
 	/** margin-top: 12px; **/
-	margin-right: 25px;
-	margin-top: 12px;
-	margin-bottom: 12px;
-}
-p.lastparagraph {
-	padding-bottom: 4px;
-}
-
-#indentGiving {
-	margin-left: 28px;
-}
-
-#indentForStudents {
-	margin-left: 28px;
-	font-size: 12px;
-	line-height: 16px;
-	margin-top: -12px;
-}
-
-#content {
+	margin:0;
+	padding:0;
 	font-size: 12px;
 	line-height: 16px;
 }
 p.content {
-	font-size: 12px;
-	line-height: 16px;
 }
+p.lastparagraph {
+	padding-bottom: 4px;
+}
+.indented {
+	margin-left: 28px;
+}
+
 span.subtext {
 	color: #aaaaaa;
 }
@@ -181,13 +169,13 @@ li {
 br {
 	size: 8px;
 }
+/*** /STANDARD HTML STYLING CODE ***/
 
 
 
-
-/** main page stuff **/
-#mainimage {
-	height: 400px;
+/*** COLUMN CODE ***/
+#columns {
+	margin-left: 0px;
 }
 .column1, .column2, .column3 {
 	float: left; 
@@ -195,38 +183,29 @@ br {
 	margin-right: 25px;
 	/**background-color: pink;**/
 }
-
-#content {
-	margin-left: 24px;
-}
-
-
-
-/** other page stuff **/
-
-#columns {
-	margin-left: 0px;
-}
-
 .column4, .column6 {
 	float: left; 
 	width: 267px;
 	margin-right: 25px;
 	
 }
-
 .column5, .column7 {
 	float: left; 
 	width: 267px;
 	margin-right: 25px;
 	
 }
-
 .clear {
 	width: 100%;
 	clear: both;
 }
+/*** /COLUMN CODE ***/
 
+
+
+
+
+/*** SCROLLER CODE ***/
 #innercontent {
 	width:599px;
 	float: right;
@@ -237,7 +216,6 @@ br {
 }
 #scroller {
 	float: left;
-	margin-left: 25px;
 	font-size: 12px;
 	line-height: 16px;
 }
@@ -245,7 +223,6 @@ br {
 	display: none;
 	position: fixed;
 	top: 0px;
-	margin-left: 25px;
 	font-size: 12px;
 	line-height: 16px;
 }
@@ -268,3 +245,4 @@ br {
 	color: #00b5a3;
 	text-decoration: none;
 }
+/*** /SCROLLER CODE ***/
