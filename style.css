@@ -27,12 +27,12 @@ body {
 	height: 400px;
 }
 
-#navigation {
+#navigation, #navigation-fixed {
 	background-color: #eeeeee;
 	background-image: url(images/divider_transparent.png);
 	background-position: center bottom;
 	background-repeat: no-repeat;
-	background-color: #ffffff;
+	background-color: rgba(255,255,255,0);
 	height: 56px;
 }
 
@@ -52,45 +52,46 @@ body {
 
 
 /*** NAVIGATION CODE ***/
-#navigation .navelement {
+#navigation .navelement, #navigation-fixed .navelement {
 	float: left;
 	height: 45px;
 	line-height: 45px;
 	font-family: 'Georgia', serif;
 	font-size: 18px;
+	background-color:#fff;
 }
-#navigation .navelement a {
+#navigation .navelement a, #navigation-fixed .navelement a {
 	display: block;
 	height: 45px;
 	padding-right: 42px;
 	padding-left: 42px;
 	color:#336699;
 }
-#navigation .navelement a.home {
+#navigation .navelement a.home, #navigation-fixed .navelement a.home {
 	width: 49px;
 }
-#navigation .navelement a.about {
+#navigation .navelement a.about, #navigation-fixed .navelement a.about {
 	width: 49px;
 }
-#navigation .navelement a.forstudents {
+#navigation .navelement a.forstudents, #navigation-fixed .navelement a.forstudents {
 	width: 102px;
 }
-#navigation .navelement a.forfaculty {
+#navigation .navelement a.forfaculty, #navigation-fixed .navelement a.forfaculty {
 	width: 92px;
 }
-#navigation .navelement a.community {
+#navigation .navelement a.community, #navigation-fixed .navelement a.community {
 	width: 95px;
 }
-#navigation .navelement a.giving {
-	width: 53px;
+#navigation .navelement a.giving, #navigation-fixed .navelement a.giving {
+	width: 54px;
 }
-#navigation .navelement a:hover {
+#navigation .navelement a:hover, #navigation-fixed .navelement a:hover {
 	background-color: #dcdcdc;
 }
-#navigation .navelement a.current {
+#navigation .navelement a.current, #navigation-fixed .navelement a.current {
 	background-color: #dcdcdc;
 }
-#navigation .border {
+#navigation .border, #navigation-fixed .border {
 	width: 0px;
 	padding-left: 1px;
 	margin-left: 1px;
@@ -99,8 +100,24 @@ body {
 	margin-top: 6px;
 	float: left;
 	border-left:1px dotted #cccccc;
+	background-color:#fff;
 }
 /*** /NAVIGATION CODE ***/
+
+/*** NAVIGATION HOVER ***/
+#navigation-fixed-wrapper {
+	position: fixed;
+	background-color: #fff;
+	height: 45px;
+	top: 0;
+	display: none;
+	z-index: 1000;
+}
+
+#navigation-fixed {
+}
+
+/*** /NAVIGATION HOVER ***/
 
 
 
@@ -277,7 +294,7 @@ body {
 	margin-right: auto;
 	display: none;
 	position: fixed;
-	top: 0px;
+	top: 45px;
 	font-size: 12px;
 	line-height: 16px;
 }

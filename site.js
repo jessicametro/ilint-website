@@ -1,12 +1,11 @@
-
-
 $(function() {
-
-    //addInboundClassToLinks();
+   scrollToSomething();
+    setupHoverNavigation();
     makeTopbarFade();
     currentNavigationItemShouldBeNotClickable();
     if (shouldDoScrollingStuff()) {
         watchForScrolling();
+	scrollLinksScroll();
         watchForHashChange();
         updateSelected();
     }
@@ -42,23 +41,33 @@ function makeTopbarFade() {
             window.location = href;
         });
     });
-    $("a.home").click(function(e) {
+    $("#navigation a, #navigation-fixed a").click(function(e) {
         e.preventDefault();
         href = $(this).attr('href');
-        var mainimage = $("#mainimage");
-        mainimage.show();
-        $('#slider').nivoSlider({
-    		effect: "fade",
-    		controlNav: false,
-    		captionOpacity: 0.9,
-    	});
-    	var height = mainimage.height();
-        mainimage.css("height", 0);
-        $("html, body").animate({ scrollTop: 0 }, 300);
-        $("body").css("height", $("body").height());
-        mainimage.animate( { 'height': height }, 500, function() {
-            window.location = href;
-        });
+	if ($(this).hasClass("home")) {
+	   var mainimage = $("#mainimage");
+	   mainimage.show();
+	   $('#slider').nivoSlider({
+		   effect: "fade",
+		   controlNav: false,
+		   captionOpacity: 0.9,
+	   });
+	   var height = mainimage.height();
+	   mainimage.css("height", 0);
+	   $("body").css("height", $("body").height());
+	   mainimage.animate( { 'height': height }, 700, function() {
+	       window.location = href;
+	   });
+	   $("html, body").animate({ scrollTop: 0 }, 500);
+	}
+	else {
+	var animtime = Math.log(1 + $(window).scrollTop() / $(window).height())  / 5;
+	console.log(animtime);
+        $("html, body").animate({ scrollTop: 0 }, animtime*1000, function() {
+		 window.location = href;
+	   });
+	}
+
     });
 
 }
@@ -70,14 +79,33 @@ function shouldDoScrollingStuff() {
 
 function watchForHashChange() {
     $(window).bind('hashchange', function() {
-        var url = $.param.fragment();
-        console.log("URL CHANGED: "+url);
+	  scrollToSomething();
     });
+}
+
+function scrollToSomething() {
+     var href = window.location.hash.replace("+","");
+     if (!href) return;
+      var animtime = Math.log(1 + Math.abs($(window).scrollTop()-$(href).offset().top) / $(window).height())  / 5;
+      $.scrollTo($(href) ,{
+	    duration: animtime*1000,
+	    offset: {left: 0, top: -45},
+	    onAfter: function() {
+	    },
+      });
+}
+
+function scrollLinksScroll() {
+   $("a.scrolllink").click(function(e) {
+      e.preventDefault();
+      href = $(this).attr('href');
+      window.location.hash = href.replace("#","+");
+   });
 }
 
 function watchForScrolling() {
     var scrolleritem = $("#scroller");
-    var scrolly = scrolleritem.offset().top;
+    var scrolly = scrolleritem.offset().top-45;
     $(document).scroll(function() {
         var windowy = $(window).scrollTop();
         if (scrolly >= windowy) {
@@ -136,4 +164,30 @@ function showHoverScroller() {
 function hideHoverScroller() {
     $("#scroller-fixed").hide();
     $("#scroller").show();
+}
+
+
+function setupHoverNavigation() {
+   $("#wrapper").append("<div id='navigation-fixed-wrapper'></div>");
+   var newnav =  $("#navigation").clone().appendTo("#navigation-fixed-wrapper");
+   newnav.attr("id","navigation-fixed");
+   var oldnav = $("#navigation");
+   var scrolly = oldnav.offset().top;
+   $(document).scroll(function() {
+	 console.log("DOOP");
+       var windowy = $(window).scrollTop();
+        if (scrolly >= windowy) {
+            hideHoverNav();
+        } else {
+            showHoverNav();
+        }
+   });
+}
+function showHoverNav() {
+    $("#navigation").css("visibility", "hidden");
+    $("#navigation-fixed-wrapper").show();
+}
+function hideHoverNav() {
+    $("#navigation").css("visibility", "visible");
+    $("#navigation-fixed-wrapper").hide();
 }
