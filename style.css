@@ -16,6 +16,9 @@ body {
 #wrapper {
 	background-color: #f1f1f1;
 	position: relative;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #header {
@@ -336,14 +339,14 @@ body {
 	background-image: none;	
 }
 #innercontent {
-	width:960px;
+	width:100%;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: transparent;
 	background-color: #fff;
 }
 .innerinnercontent {
-	width:960px;
+	width:100%;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -356,7 +359,8 @@ body {
 }
 #scroller, #scroller-fixed {
 	text-align: right;
-	padding-right: 30px;
+	padding-right: 10px;
+	margin-right: 20px;
 	width: 245px;
 	background: rgba(255,255,255,0.5);
 	border-right: 2px dotted #e3e3e3;

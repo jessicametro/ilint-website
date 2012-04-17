@@ -117,6 +117,7 @@ function scrollLinksScroll() {
 
    $(".scrollwatcher").mouseover(function(e) {
       href = $(this).attr('id');
+      //return; //uncomment out this line to GET RID of the hoverover selection
       setHashForPage("#"+href);
       unselectAllInScrollbar();
       selectInScrollbar(href,false);
@@ -139,7 +140,7 @@ function watchForScrolling() {
         } else {
             showHoverScroller();
         }
-        updateSelected();
+        //updateSelected(); //Uncomment this line to have scrolling update the sections
     });
 }
 
