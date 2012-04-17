@@ -86,12 +86,13 @@ function scrollToSomething() {
      var href = window.location.hash.replace("+","");
      if (!href || !$(href).length) return;
       var animtime = Math.log(1 + Math.abs($(window).scrollTop()-$(href).offset().top) / $(window).height())  / 5;
+      var scrollto = href;
       if ($(href).hasClass("notopdivider")) { //meaning we're the top div
-	    href="#wrapper"; //make it tall
+	    scrollto="#wrapper"; //make it tall
       }
-      $.scrollTo($(href) ,{
+      $.scrollTo($(scrollto) ,{
 	    duration: animtime*1000,
-	    offset: {left: 0, top: -45},
+	    offset: {left: 0, top: -40},
 	    onAfter: function() {
 	       unselectAllInScrollbar();
 	       selectInScrollbar(href.replace("#",""),false);
@@ -116,7 +117,7 @@ function setHashForPage(href) {
 
 function watchForScrolling() {
     var scrolleritem = $("#scroller");
-    var scrolly = scrolleritem.offset().top-45;
+    var scrolly = scrolleritem.offset().top-40;
     $(document).scroll(function() {
         var windowy = $(window).scrollTop();
         if (scrolly >= windowy) {
