@@ -48,10 +48,19 @@ body {
 #content {
 }
 
+.firstpage_fixedwidth {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 #footer {
 	margin-top: 30px;
 	height: 147px;
 	background-image: url('footer.png');
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 
