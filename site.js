@@ -116,8 +116,8 @@ function scrollLinksScroll() {
    });
 
    $(".scrollwatcher").mouseover(function(e) {
+      if (!areWeAtBottom()) return;
       href = $(this).attr('id');
-      //return; //uncomment out this line to GET RID of the hoverover selection
       setHashForPage("#"+href);
       unselectAllInScrollbar();
       selectInScrollbar(href,false);
@@ -125,6 +125,17 @@ function scrollLinksScroll() {
    });
 }
 
+
+function areWeAtBottom() {
+var scrollbottom = $(window).scrollTop() + $(window).height();
+    var docheight = $(document).height();
+    //console.log("scrollbottom : "+scrollbottom);
+    //console.log("docheight : " +docheight);
+    if (scrollbottom >= docheight) {
+       return true;
+    }
+    return false;
+}
 
 function setHashForPage(href) {
     window.location.hash = "+"+href.replace("#","");
@@ -140,7 +151,8 @@ function watchForScrolling() {
         } else {
             showHoverScroller();
         }
-        //updateSelected(); //Uncomment this line to have scrolling update the sections
+        if (!areWeAtBottom())
+	    updateSelected(); //Uncomment this line to have scrolling update the sections
     });
 }
 
@@ -210,7 +222,7 @@ function showHoverScroller() {
     $("#scroller-fixed").show();
     $("#scroller").hide();
 }
-
+;
 function hideHoverScroller() {
     $("#scroller-fixed").hide();
     $("#scroller").show();

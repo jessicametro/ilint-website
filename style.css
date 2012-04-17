@@ -165,7 +165,7 @@ body {
 		color: #ff6e00;
 		text-decoration: underline;
 	}
-	#navigation a:hover {
+	#navigation a:hover, #navigation-fixed a:hover {
 		text-decoration: none;
 	}
 	.mocklinks {
