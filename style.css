@@ -32,7 +32,6 @@ body {
 }
 
 #content {
-	margin-left: 24px;
 }
 
 #footer {
@@ -241,30 +240,34 @@ body {
 /* our main content sections */
 .scrollwatcher {
 	padding-bottom: 11px;
-	margin-left: -360px;
-	padding-left: 360px;
-	padding-right: 25px;
+	margin-right: -360px;
+	padding-right: 360px;
+	padding-left: 25px;
 }
 #innercontent {
 	width:599px;
-	float: right;
+	float: left;
 }
 #scroller, #scroller-fixed {
-	width: 287px;
 }
 #scroller {
-	float: left;
+	width: 287px;
+	float: right;
 	font-size: 12px;
 	line-height: 16px;
 }
 #scroller-fixed {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
 	display: none;
 	position: fixed;
 	top: 0px;
 	font-size: 12px;
 	line-height: 16px;
+	padding-left: 673px;
 }
-#menufixed {
+#content {
 	position: relative;
 }
 #scroller a, #scroller-fixed a {
