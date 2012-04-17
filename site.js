@@ -108,7 +108,7 @@ function fixScrollToActuallyReachBottomThing() {
 	var height = $(window).height();
 	var docheight = $(document).height();
 	var marginbottom = $("#footer").height() + 31;
-	return scrolly + (height-marginbottom) * (scrolly/(docheight-height));
+	return scrolly + 200; // (height-marginbottom) * (scrolly/(docheight-height));
 }
 function selectInScrollbar(name) {
     $("a.scrolllink").each(function(index, element) {

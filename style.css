@@ -276,3 +276,22 @@ body {
 	text-decoration: none;
 }
 /*** /SCROLLER CODE ***/
+
+
+/*** BACKGROUND ANIMATION CODE ***/
+.content_selected {
+	//-webkit-animation: whitetoblack 2s;
+	background-color: #ffffff;
+}
+
+.content_unselected {
+	//-webkit-animation: whitetoblack 2s;
+	//-webkit-animation-direction: alternate;
+	background-color: #f1f1f1;
+}
+
+@-webkit-keyframes whitetoblack {
+0%		{ background: #ffffff; }
+100%	{ background: #000000; }
+}
+/*** /BACKGROUND ANIMATION CODE ***/
