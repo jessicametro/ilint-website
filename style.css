@@ -5,7 +5,7 @@ body {
 	top: 0;
 	margin-right: auto;
 	margin-left: auto;
-	width: 960px;
+	width: 100%;
 	font-size: 12px;
 	line-height: 16px;
 	font-family: 'Helvetica Neue', 'Helvetica', 'Lucida Grande', 'Arial', sans-serif;
@@ -20,11 +20,17 @@ body {
 
 #header {
 	height: 93px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
 	background-image: url('header.png');
 }
 
 #mainimage {
 	height: 400px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #navigation, #navigation-fixed {
@@ -34,6 +40,9 @@ body {
 	background-repeat: no-repeat;
 	background-color: rgba(255,255,255,0);
 	height: 51px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 #content {
@@ -110,6 +119,9 @@ body {
 /*** NAVIGATION HOVER ***/
 #navigation-fixed-wrapper {
 	position: fixed;
+	width:960px;
+	right: 50%;
+	margin-right: -480px;
 	background-color: #fff;
 	height: 40px;
 	top: 0;
@@ -289,10 +301,12 @@ body {
 /*** SCROLLER CODE ***/
 /* our main content sections */
 .scrollwatcher {
-	margin-right: -330px;
 	padding-right: 330px;
 	padding-left: 30px;
 	padding-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
 	background-image: url(images/divider_transparent.png);
 	background-position: center top;
 	background-repeat: no-repeat;
@@ -301,8 +315,22 @@ body {
 	background-image: none;	
 }
 #innercontent {
-	width:630px;
-	float: left;
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: transparent;
+}
+.innerinnercontent {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+#scroller-wrapper {
+	position: absolute;
+	width: 480px;
+	z-index: 1000000;
+	top: 0px;
+	left: 50%;
 }
 #scroller, #scroller-fixed {
 	text-align: right;
@@ -312,18 +340,21 @@ body {
 	border-right: 2px dotted #e3e3e3;
 	margin-top: 23px;
 	padding-bottom: 10px;
+	z-index: 1000;
 }
 #scroller h2, #scroller-fixed h2 {
 	padding-top: 6px;
 }
 #scroller {
-	float: right;
+	position: absolute;
+	right: 0px;
+	top: 0px;
 	font-size: 12px;
 	line-height: 16px;
 }
 #scroller-fixed {
-	margin-left: 685px;
-	margin-right: auto;
+	left: 50%;
+	margin-left: 203px;
 	display: none;
 	position: fixed;
 	top: 40px;

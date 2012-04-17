@@ -11,6 +11,7 @@ $(function() {
     }
     fixfixH2s();
 
+    fixfixfix();
 });
 
 
@@ -21,6 +22,11 @@ function fixfixH2s() {
 	 console.log("asdf");
       $(this).attr("title",$(this).text());
    });
+}
+
+function fixfixfix() {
+   $("#scroller").wrap("<div id='scroller-wrapper'/>");
+   $(".scrollwatcher").wrap("<div class='innerinnercontent'/>");
 }
 
 function currentNavigationItemShouldBeNotClickable() {
@@ -117,7 +123,7 @@ function setHashForPage(href) {
 
 function watchForScrolling() {
     var scrolleritem = $("#scroller");
-    var scrolly = scrolleritem.offset().top-40;
+    var scrolly = scrolleritem.offset().top-62;
     $(document).scroll(function() {
         var windowy = $(window).scrollTop();
         if (scrolly >= windowy) {
@@ -172,7 +178,7 @@ function selectInScrollbar(name, shouldupdatehash) {
             $(this).addClass("selected");
         }
     });
-    $("#"+name).addClass("content_selected").removeClass("content_unselected");
+    $("#"+name).addClass("content_selected").removeClass("content_unselected").parent().addClass("content_selected").removeClass("content_unselected");
     if (shouldupdatehash) {
        setHashForPage(name);
     } else {
@@ -185,10 +191,10 @@ function unselectInScrollbar(name) {
             $(this).removeClass("selected");
         }
     });
-    $("#"+name).addClass("content_unselected").removeClass("content_selected");
+    $("#"+name).addClass("content_unselected").removeClass("content_selected").parent().addClass("content_unselected").removeClass("content_selected");
 }
 function unselectAllInScrollbar() {
-   $(".content_selected").removeClass("content_selected").addClass("content_unselected");
+   $(".content_selected").removeClass("content_selected").addClass("content_unselected").parent().addClass("content_unselected").removeClass("content_selected");
    $("a.selected").removeClass("selected");
 }
 function showHoverScroller() {
