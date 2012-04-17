@@ -82,11 +82,6 @@ body {
 }
 #navigation .navelement a:hover {
 	background-color: #dcdcdc;
-}/* our main content sections */
-.scrollwatcher {
-	padding-bottom: 11px;
-	margin-left: -360px;
-	padding-left: 360px;
 }
 #navigation .navelement a.current {
 	background-color: #dcdcdc;
