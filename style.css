@@ -15,6 +15,7 @@ body {
 /*** MAIN LAYOUT OF SITE ***/
 #wrapper {
 	background-color: #ffffff;
+	position: relative;
 }
 
 #header {
@@ -27,8 +28,12 @@ body {
 }
 
 #navigation {
-	height: 45px;
 	background-color: #eeeeee;
+	background-image: url(images/divider_transparent.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	height: 56px;
 }
 
 #content {
@@ -208,6 +213,9 @@ body {
 #columns {
 	margin-left: 0px;
 }
+.column1 {
+	margin-left: 24px;
+}
 .column1, .column2, .column3 {
 	float: left; 
 	width: 287px;
@@ -239,7 +247,7 @@ body {
 /*** SCROLLER CODE ***/
 /* our main content sections */
 .scrollwatcher {
-	padding-bottom: 11px;
+	padding-bottom: 40px;
 	margin-right: -360px;
 	padding-right: 360px;
 	padding-left: 25px;
@@ -265,16 +273,16 @@ body {
 	line-height: 16px;
 }
 #scroller-fixed {
-	margin-left: auto;
+	margin-left: 648px;
 	margin-right: auto;
 	display: none;
 	position: fixed;
 	top: 0px;
 	font-size: 12px;
 	line-height: 16px;
-	padding-left: 648px;
 }
 #content {
+	margin-top: -11px;
 	position: relative;
 }
 #scroller a, #scroller-fixed a {
@@ -299,7 +307,7 @@ body {
 /*** BACKGROUND ANIMATION CODE ***/
 .content_selected {
 	-webkit-animation: blacktowhite 0.5s;
-	background-color: #ffffff;
+	background-color: rgba(255,255,255,0);
 }
 
 .content_unselected {
@@ -309,7 +317,7 @@ body {
 
 @-webkit-keyframes whitetoblack {
 from {
-	background-color: #ffffff;
+	background-color: rgba(255,255,255,0);
 }
 to {
 	background-color: #f1f1f1;
@@ -320,7 +328,7 @@ from {
 	background-color: #f1f1f1;
 }
 to {
-	background-color: #ffffff;
+	background-color: rgba(255,255,255,0);
 }
 }
 /*** /BACKGROUND ANIMATION CODE ***/
