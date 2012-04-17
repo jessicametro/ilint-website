@@ -249,15 +249,16 @@ body {
 	float: left;
 }
 #scroller, #scroller-fixed {
+	text-align: right;
+	padding-right: 25px;
+	width: 287px;
 }
 #scroller {
-	width: 287px;
 	float: right;
 	font-size: 12px;
 	line-height: 16px;
 }
 #scroller-fixed {
-	width: 960px;
 	margin-left: auto;
 	margin-right: auto;
 	display: none;
@@ -265,7 +266,7 @@ body {
 	top: 0px;
 	font-size: 12px;
 	line-height: 16px;
-	padding-left: 673px;
+	padding-left: 648px;
 }
 #content {
 	position: relative;
