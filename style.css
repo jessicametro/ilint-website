@@ -40,6 +40,8 @@ body {
 	height: 147px;
 	background-image: url('footer.png');
 }
+
+
 /*** /MAIN LAYOUT OF SITE ***/
 
 
@@ -80,6 +82,11 @@ body {
 }
 #navigation .navelement a:hover {
 	background-color: #dcdcdc;
+}/* our main content sections */
+.scrollwatcher {
+	padding-bottom: 11px;
+	margin-left: -360px;
+	padding-left: 360px;
 }
 #navigation .navelement a.current {
 	background-color: #dcdcdc;
@@ -236,10 +243,16 @@ body {
 
 
 /*** SCROLLER CODE ***/
+/* our main content sections */
+.scrollwatcher {
+	padding-bottom: 11px;
+	margin-left: -360px;
+	padding-left: 360px;
+	padding-right: 25px;
+}
 #innercontent {
 	width:599px;
 	float: right;
-	margin-right: 25px;
 }
 #scroller, #scroller-fixed {
 	width: 287px;
@@ -282,12 +295,18 @@ body {
 .content_selected {
 	//-webkit-animation: whitetoblack 2s;
 	background-color: #ffffff;
+	background-image: url(images/divider_top.png);
+	background-position: center top;
+	background-repeat: no-repeat;
 }
 
 .content_unselected {
 	//-webkit-animation: whitetoblack 2s;
 	//-webkit-animation-direction: alternate;
 	background-color: #f1f1f1;
+	background-image: url(images/divider_bottom.png);
+	background-position: center top;
+	background-repeat: no-repeat;
 }
 
 @-webkit-keyframes whitetoblack {
