@@ -1,5 +1,5 @@
 body {
-	background-color: #f6f6f6;
+	background-color: #f1f1f1;
 	margin: 0;
 	padding: 0;
 	top: 0;
@@ -157,7 +157,7 @@ body {
 		padding-bottom: 12px;
 	}
 	h1 {
-		border-bottom: 1px dotted #cfcfcf;
+		border-bottom: 2px dotted #e3e3e3;
 	}
 	#innercontent h2 {
 		font-size: 40px;
