@@ -114,6 +114,14 @@ function scrollLinksScroll() {
       setHashForPage(href);
       scrollToSomething();
    });
+
+   $(".scrollwatcher").mouseover(function(e) {
+      href = $(this).attr('id');
+      setHashForPage("#"+href);
+      unselectAllInScrollbar();
+      selectInScrollbar(href,false);
+
+   });
 }
 
 
