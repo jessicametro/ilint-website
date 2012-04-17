@@ -155,9 +155,30 @@ body {
 	h1 {
 		border-bottom: 1px dotted #cfcfcf;
 	}
-	h2 {
-		line-height: 22px;
+	#innercontent h2 {
+		font-size: 40px;
+		color: #999;	
+		padding-top: 30px;
+		padding-bottom: 30px;
+		line-height: 40px;
+		position: relative;
 	}
+	#innercontent h2:before, #innercontent h2:after {
+		content: attr(title);
+		padding-top: 30px;
+		padding-bottom: 30px;
+		color: rgba(255,255,255,.3);
+		position: absolute;
+	}
+
+	#innercontent h2:before {
+		top: 1px; left: 1px;
+	}
+
+	#innercontent h2:after {
+		top: 1px; left: 0px;
+	}
+
 	h3 {
 		margin: 0;
 		padding: 0;

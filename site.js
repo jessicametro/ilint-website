@@ -9,19 +9,18 @@ $(function() {
         watchForHashChange();
         updateSelected();
     }
+    fixfixH2s();
 
 });
 
 
-//never called.
-function addInboundClassToLinks() {
-    $('a').each(function() {
-       var that = $(this);
-       var href = that.attr('href');
-       if(href.search('/') == -1 && href.search('#') == -1) {      
-          that.addClass('inbound');
-       }
-    });
+
+
+function fixfixH2s() {
+   $("h2").each(function(index, Element) {
+	 console.log("asdf");
+      $(this).attr("title",$(this).text());
+   });
 }
 
 function currentNavigationItemShouldBeNotClickable() {
@@ -130,7 +129,7 @@ function watchForScrolling() {
 }
 
 function updateSelected() {
-    //if ( $(".content_selected").offset().top- ($(document).height()-$(window).height()+73)) {
+    //if ( $(".content_selected").offset().top- ($(document).height()-$(window).heigh$(this).html)t()+73)) {
       //leave it alone
      // return;
     //}
