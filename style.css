@@ -334,13 +334,13 @@ body {
 	background-image: none;	
 }
 #innercontent {
-	width:100%;
+	width:960px;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: transparent;
 }
 .innerinnercontent {
-	width: 100%;
+	width:960px;
 	margin-right: auto;
 	margin-left: auto;
 }
