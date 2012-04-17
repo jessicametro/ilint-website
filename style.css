@@ -264,6 +264,11 @@ body {
 		margin:0;
 		height: 4px;
 	}
+	div.dottedLine {
+		border-bottom: 2px dotted #e3e3e3;
+	}
+		
+	
 /*** /STANDARD HTML STYLING CODE ***/
 
 
