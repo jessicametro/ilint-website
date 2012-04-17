@@ -283,6 +283,13 @@ body {
 	text-align: right;
 	padding-right: 30px;
 	width: 245px;
+	background: rgba(255,255,255,0.7);
+	border-right: 2px dotted #e3e3e3;
+	margin-top: 23px;
+	padding-bottom: 10px;
+}
+#scroller h2, #scroller-fixed h2 {
+	padding-top: 6px;
 }
 #scroller {
 	float: right;
