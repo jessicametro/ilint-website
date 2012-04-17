@@ -294,6 +294,7 @@ body {
 }
 .column1 {
 	margin-left: 24px;
+	margin-bottom: 30px;
 }
 .column1, .column2, .column3 {
 	float: left; 
