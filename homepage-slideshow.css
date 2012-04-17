@@ -1,4 +1,14 @@
 .theme-default .nivo-caption {
+
+}
+
+
+.theme-default .nivo-caption p {
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	margin: 0;
 	font-family: Georgia, Serif;
 	font-style: italic;
 	background-color: rgba(0,0,0,0.5);
@@ -7,12 +17,6 @@
 	line-height: 24px;
 	font-size: 18px;
 	font-weight: normal;	
-}
-
-
-.theme-default .nivo-caption p {
-	padding-left: 18px;
-	padding-top: 10px;
 }
 
 
