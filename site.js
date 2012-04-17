@@ -4,7 +4,7 @@ $(function() {
 
     //addInboundClassToLinks();
     makeTopbarFade();
-
+    currentNavigationItemShouldBeNotClickable();
     if (shouldDoScrollingStuff()) {
         watchForScrolling();
         watchForHashChange();
@@ -22,6 +22,12 @@ function addInboundClassToLinks() {
        if(href.search('/') == -1 && href.search('#') == -1) {      
           that.addClass('inbound');
        }
+    });
+}
+
+function currentNavigationItemShouldBeNotClickable() {
+    $("a.current").click(function(e) {
+	    e.preventDefault();
     });
 }
 
