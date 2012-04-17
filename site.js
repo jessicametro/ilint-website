@@ -117,6 +117,7 @@ function selectInScrollbar(name) {
             $(this).addClass("selected");
         }
     });
+    $("#"+name).addClass("content_selected").removeClass("content_unselected");
 }
 function unselectInScrollbar(name) {
     $("a.scrolllink").each(function(index, element) {
@@ -125,6 +126,7 @@ function unselectInScrollbar(name) {
             $(this).removeClass("selected");
         }
     });
+    $("#"+name).addClass("content_unselected").removeClass("content_selected");
 }
 function showHoverScroller() {
     $("#scroller-fixed").show();
