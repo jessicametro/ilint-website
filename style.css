@@ -3,12 +3,13 @@ body {
 	margin: 0;
 	padding: 0;
 	top: 0;
-	margin-right: auto;
-	margin-left: auto;
 	width: 100%;
 	font-size: 12px;
 	line-height: 16px;
 	font-family: 'Helvetica Neue', 'Helvetica', 'Lucida Grande', 'Arial', sans-serif;
+	background-image: url(images/dropshadow_background.png);
+	background-repeat: repeat-y;
+	background-position: center top;
 }
 
 
