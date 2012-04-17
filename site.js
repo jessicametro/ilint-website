@@ -85,14 +85,20 @@ function watchForHashChange() {
 
 function scrollToSomething() {
      var href = window.location.hash.replace("+","");
-     if (!href) return;
+     if (!href || !$(href).length) return;
       var animtime = Math.log(1 + Math.abs($(window).scrollTop()-$(href).offset().top) / $(window).height())  / 5;
+      if ($(href).hasClass("notopdivider")) { //meaning we're the top div
+	    href="#wrapper"; //make it tall
+      }
       $.scrollTo($(href) ,{
 	    duration: animtime*1000,
 	    offset: {left: 0, top: -45},
 	    onAfter: function() {
+	       unselectAllInScrollbar();
+	       selectInScrollbar(href.replace("#",""),false);
 	    },
       });
+
 }
 
 function scrollLinksScroll() {
@@ -124,13 +130,23 @@ function watchForScrolling() {
 }
 
 function updateSelected() {
+    //if ( $(".content_selected").offset().top- ($(document).height()-$(window).height()+73)) {
+      //leave it alone
+     // return;
+    //}
+    var scrollbottom = $(window).scrollTop() + $(window).height();
+    var docheight = $(document).height();
+    //console.log("scrollbottom : "+scrollbottom);
+    //console.log("docheight : " +docheight);
+    if (scrollbottom >= docheight) {
+       return;
+    }
     $(".scrollwatcher").each(function(index, Element) {
         var name = $(this).attr('id');
         var itemy = $(this).offset().top;
 	var update = true;
 	if ($(this).hasClass("notopdivider")) { //meaning we're the top div
 	    itemy = 0; //make it tall
-	    update = false;
 	 }
         var height = $(this).height()+31; //we has 30 padding at bottom
         var scrolly = fixScrollToActuallyReachBottomThing();
@@ -160,7 +176,6 @@ function selectInScrollbar(name, shouldupdatehash) {
     if (shouldupdatehash) {
        setHashForPage(name);
     } else {
-       setHashForPage("");
     }
 }
 function unselectInScrollbar(name) {
@@ -171,6 +186,10 @@ function unselectInScrollbar(name) {
         }
     });
     $("#"+name).addClass("content_unselected").removeClass("content_selected");
+}
+function unselectAllInScrollbar() {
+   $(".content_selected").removeClass("content_selected").addClass("content_unselected");
+   $("a.selected").removeClass("selected");
 }
 function showHoverScroller() {
     $("#scroller-fixed").show();
