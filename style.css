@@ -49,7 +49,7 @@ body {
 }
 
 #footer {
-	margin-top: 30px;
+	/**margin-top: 30px;**/
 	height: 147px;
 	background-image: url('footer.png');
 }
@@ -346,7 +346,7 @@ body {
 	text-align: right;
 	padding-right: 30px;
 	width: 245px;
-	background: rgba(255,255,255,0.7);
+	background: rgba(255,255,255,0.5);
 	border-right: 2px dotted #e3e3e3;
 	margin-top: 23px;
 	padding-bottom: 10px;
