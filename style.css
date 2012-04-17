@@ -60,6 +60,7 @@ body {
 	left: 50%;
 	margin-left: -480px;
 	height: 147px;
+	margin-top: -40px;
 	background-image: url('footer.png');
 	width: 960px;
 }
