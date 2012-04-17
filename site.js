@@ -60,7 +60,7 @@ function makeTopbarFade() {
 	   });
 	   $("html, body").animate({ scrollTop: 0 }, 500);
 	}
-	else if (!$(this).hasClass("inbound")) {
+	else if (!$(this).hasClass("inbound") && !$(this).hasClass("current")) {
 	   var animtime = Math.log(1 + $(window).scrollTop() / $(window).height())  / 5;
 	   console.log(animtime);
 	   $("html, body").animate({ scrollTop: 0 }, animtime*1000, function() {
@@ -79,7 +79,7 @@ function shouldDoScrollingStuff() {
 
 function watchForHashChange() {
     $(window).bind('hashchange', function() {
-	  scrollToSomething();
+	  //scrollToSomething();
     });
 }
 
@@ -99,8 +99,14 @@ function scrollLinksScroll() {
    $("a.scrolllink").click(function(e) {
       e.preventDefault();
       href = $(this).attr('href');
-      window.location.hash = href.replace("#","+");
+      setHashForPage(href);
+      scrollToSomething();
    });
+}
+
+
+function setHashForPage(href) {
+    window.location.hash = "+"+href.replace("#","");
 }
 
 function watchForScrolling() {
@@ -121,11 +127,16 @@ function updateSelected() {
     $(".scrollwatcher").each(function(index, Element) {
         var name = $(this).attr('id');
         var itemy = $(this).offset().top;
-        var height = $(this).height();
+	var update = true;
+	if ($(this).hasClass("notopdivider")) { //meaning we're the top div
+	    itemy = 0; //make it tall
+	    update = false;
+	 }
+        var height = $(this).height()+31; //we has 30 padding at bottom
         var scrolly = fixScrollToActuallyReachBottomThing();
         //scrolly  = scrolly + 100; //give us some buffer;
         if ((itemy+height) > scrolly && itemy < scrolly) {
-            selectInScrollbar(name);
+            selectInScrollbar(name, update);
         } else {
             unselectInScrollbar(name);
         }
@@ -136,9 +147,9 @@ function fixScrollToActuallyReachBottomThing() {
 	var height = $(window).height();
 	var docheight = $(document).height();
 	var marginbottom = $("#footer").height() + 31;
-	return scrolly + 200; // (height-marginbottom) * (scrolly/(docheight-height));
+	return scrolly + 73; // (height-marginbottom) * (scrolly/(docheight-height));
 }
-function selectInScrollbar(name) {
+function selectInScrollbar(name, shouldupdatehash) {
     $("a.scrolllink").each(function(index, element) {
         var linkname = $(this).attr("href").replace("#", "");
         if (linkname == name) {
@@ -146,6 +157,11 @@ function selectInScrollbar(name) {
         }
     });
     $("#"+name).addClass("content_selected").removeClass("content_unselected");
+    if (shouldupdatehash) {
+       setHashForPage(name);
+    } else {
+       setHashForPage("");
+    }
 }
 function unselectInScrollbar(name) {
     $("a.scrolllink").each(function(index, element) {
