@@ -115,6 +115,7 @@ body {
 }
 
 #navigation-fixed {
+	width: 960px;
 }
 
 /*** /NAVIGATION HOVER ***/
