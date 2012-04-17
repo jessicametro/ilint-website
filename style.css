@@ -14,7 +14,7 @@ body {
 
 /*** MAIN LAYOUT OF SITE ***/
 #wrapper {
-	background-color: #ffffff;
+	background-color: #f1f1f1;
 	position: relative;
 }
 
@@ -56,11 +56,12 @@ body {
 
 #footer {
 	/**margin-top: 30px;**/
+	position: absolute;
+	left: 50%;
+	margin-left: -480px;
 	height: 147px;
 	background-image: url('footer.png');
 	width: 960px;
-	margin-right: auto;
-	margin-left: auto;
 }
 
 
@@ -338,6 +339,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: transparent;
+	background-color: #fff;
 }
 .innerinnercontent {
 	width:960px;
