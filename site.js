@@ -172,10 +172,11 @@ function updateSelected() {
         var name = $(this).attr('id');
         var itemy = $(this).offset().top;
 	var update = true;
+        var height = $(this).height()+31; //we has 30 padding at bottom
 	if ($(this).hasClass("notopdivider")) { //meaning we're the top div
+	    height = height + itemy;
 	    itemy = 0; //make it tall
 	 }
-        var height = $(this).height()+31; //we has 30 padding at bottom
         var scrolly = fixScrollToActuallyReachBottomThing();
         //scrolly  = scrolly + 100; //give us some buffer;
         if ((itemy+height) > scrolly && itemy < scrolly) {
