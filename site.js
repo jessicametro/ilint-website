@@ -60,10 +60,10 @@ function makeTopbarFade() {
 	   });
 	   $("html, body").animate({ scrollTop: 0 }, 500);
 	}
-	else {
-	var animtime = Math.log(1 + $(window).scrollTop() / $(window).height())  / 5;
-	console.log(animtime);
-        $("html, body").animate({ scrollTop: 0 }, animtime*1000, function() {
+	else if (!$(this).hasClass("inbound")) {
+	   var animtime = Math.log(1 + $(window).scrollTop() / $(window).height())  / 5;
+	   console.log(animtime);
+	   $("html, body").animate({ scrollTop: 0 }, animtime*1000, function() {
 		 window.location = href;
 	   });
 	}
